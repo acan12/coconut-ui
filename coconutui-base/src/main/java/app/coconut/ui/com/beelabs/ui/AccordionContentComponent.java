@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.component;
+package app.coconut.ui.com.beelabs.ui;
 
 import android.animation.ValueAnimator;
 import android.view.View;

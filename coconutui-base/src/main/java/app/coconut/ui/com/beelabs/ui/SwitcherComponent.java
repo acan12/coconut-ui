@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.component;
+package app.coconut.ui.com.beelabs.ui;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.EventListener;
 import java.util.List;
 
-public class SwitcherComponent extends BaseComponent {
+public class SwitcherComponent {
 
     private Button[] buttons;
     public int checkedIndex;
