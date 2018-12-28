@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "208553598398",
+    "firebase_url": "https://coconut-9de24.firebaseio.com",
+    "project_id": "coconut-9de24",
+    "storage_bucket": "coconut-9de24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208553598398:android:e19e7a6370b6cbe0",
+        "android_client_info": {
+          "package_name": "ui.coconut.com.beelabs.app.coconutui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208553598398-lkvnevjmlnkh80tsgqb1btg933nih3am.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ui.coconut.com.beelabs.app.coconutui",
+            "certificate_hash": "4854552a0ae9dadbc509d73c2c209b5d9da345b2"
+          }
+        },
+        {
+          "client_id": "208553598398-9vufbu7fkbcbnlq62buhjq4rik6nfv45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZh_kIPggiiCKZsBzmfJQo0uwNhovRZKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208553598398-9vufbu7fkbcbnlq62buhjq4rik6nfv45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

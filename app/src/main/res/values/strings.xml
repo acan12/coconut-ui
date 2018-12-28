@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoconutUI</string>
+
+    <string name="map_google_credential">AIzaSyA6AMCoHo4f5Yp0vCEB8VpPNzQdbkyQmU8</string>
 </resources>
