@@ -33,6 +33,8 @@ dependencies {
     // basic
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     implementation 'com.github.acan12:coconut:2.0.4'
+    implementation 'com.jakewharton:butterknife:8.8.1'  // ButterKnife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1' // ButterKnife
 
 
 

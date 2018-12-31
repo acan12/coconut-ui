@@ -1,8 +1,7 @@
-package ui.coconut.com.beelabs.app.coconutui;
+package ui.coconut.com.beelabs.app.coconutui.demo;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -20,7 +19,6 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -32,6 +30,8 @@ import app.beelabs.com.codebase.base.BaseActivity;
 import app.coconut.ui.com.beelabs.UIBase;
 import app.coconut.ui.com.beelabs.ui.map.CocoBaseMap;
 import pl.tajchert.nammu.Nammu;
+import ui.coconut.com.beelabs.app.coconutui.IConfig;
+import ui.coconut.com.beelabs.app.coconutui.R;
 
 public class DemoMapActivity extends BaseActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
