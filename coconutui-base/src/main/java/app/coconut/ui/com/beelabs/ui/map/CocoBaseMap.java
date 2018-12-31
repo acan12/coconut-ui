@@ -5,9 +5,12 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import app.beelabs.com.codebase.base.BaseActivity;
+
 
 public class CocoBaseMap {
 
@@ -18,6 +21,19 @@ public class CocoBaseMap {
     public CocoBaseMap(GoogleMap googleMap, GoogleApiClient googleApiClient) {
         this.googleMap = googleMap;
         this.googleApiClient = googleApiClient;
+    }
+
+
+    public void setGoogleMap(GoogleMap googleMap) {
+        this.googleMap = googleMap;
+    }
+
+    public GoogleMap getGoogleMap() {
+        return googleMap;
+    }
+
+    public static GoogleApiClient getGoogleApiClient() {
+        return googleApiClient;
     }
 
     // -- basemap
@@ -44,13 +60,13 @@ public class CocoBaseMap {
         return googleApiClient;
     }
 
-    public CocoBaseMap showMapLocationByCoordinate(double[] latlng, boolean showCurrentLocation, boolean clear) {
+    public CocoBaseMap showMapLocationByCoordinate(double[] latlngDefault, boolean showCurrentLocation, boolean clearMarker, int markerInt) {
 
-        if (clear) googleMap.clear();
+        if (clearMarker) googleMap.clear();
 
-        if (latlng.length > 0) {
+        if (latlngDefault.length > 0) {
 
-            LatLng latLng = new LatLng(latlng[0], latlng[1]);
+            LatLng latLng = new LatLng(latlngDefault[0], latlngDefault[1]);
 
             if (showCurrentLocation) {
 
@@ -58,21 +74,22 @@ public class CocoBaseMap {
                 return this;
 
             } else {
-                createMarker(googleMap, latLng, true, true);
+                createMarker(googleMap, latLng, clearMarker, markerInt);
             }
-
-
         }
 
         return null;
     }
 
 
-    public void createMarker(GoogleMap googleMap, LatLng place, boolean centerilize, boolean clearMap) {
+    public void createMarker(GoogleMap googleMap, LatLng place, boolean clearMap, int markerInt) {
         if (clearMap) googleMap.clear();
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place, 15f));
-
+        googleMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(markerInt))
+                .position(place)
+                .title("My Home"));
     }
 
 

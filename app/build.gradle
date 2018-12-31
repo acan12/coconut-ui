@@ -28,6 +28,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:11.4.2'
     implementation 'com.google.android.gms:play-services-maps:11.4.2'
     implementation 'com.google.android.gms:play-services-places:11.4.2'
+    implementation 'com.github.tajchert:nammu:1.2.0'
 
     // basic
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
