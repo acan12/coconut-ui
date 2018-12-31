@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import app.beelabs.com.codebase.base.BaseActivity;
@@ -17,6 +18,7 @@ public class CocoBaseMap {
     private static CocoBaseMap baseMap;
     private GoogleMap googleMap;
     private static GoogleApiClient googleApiClient;
+    private Marker posMarker;
 
     public CocoBaseMap(GoogleMap googleMap, GoogleApiClient googleApiClient) {
         this.googleMap = googleMap;
@@ -69,7 +71,6 @@ public class CocoBaseMap {
             LatLng latLng = new LatLng(latlngDefault[0], latlngDefault[1]);
 
             if (showCurrentLocation) {
-
                 googleApiClient.reconnect();
                 return this;
 
@@ -82,15 +83,16 @@ public class CocoBaseMap {
     }
 
 
-    public void createMarker(GoogleMap googleMap, LatLng place, boolean clearMap, int markerInt) {
+    public void createMarker(GoogleMap googleMap, LatLng currentCoordinate, boolean clearMap, int markerInt) {
         if (clearMap) googleMap.clear();
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place, 15f));
-        googleMap.addMarker(new MarkerOptions()
+        posMarker = googleMap.addMarker(new MarkerOptions()
+                .flat(true)
                 .icon(BitmapDescriptorFactory.fromResource(markerInt))
-                .position(place)
-                .title("My Home"));
+                .anchor(.5f, .5f)
+                .position(currentCoordinate)
+        );
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentCoordinate, 15f));
     }
-
-
 }

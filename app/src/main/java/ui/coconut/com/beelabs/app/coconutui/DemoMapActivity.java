@@ -2,7 +2,7 @@ package ui.coconut.com.beelabs.app.coconutui;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -21,7 +20,8 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.IOException;
@@ -81,11 +81,11 @@ public class DemoMapActivity extends BaseActivity implements OnMapReadyCallback,
     @SuppressLint("MissingPermission")
     private void renderMap(final GoogleMap googleMap) {
         googleMap.clear();
-        googleMap.setMyLocationEnabled(true);
+        googleMap.setMyLocationEnabled(false);
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         // Turn on the My Location layer and the related control on the map.
         baseMap.setGoogleMap(googleMap);
-        baseMap.showMapLocationByCoordinate(new double[]{-6.1753924,106.8249641}, false, true, R.drawable.marker);
+        baseMap.showMapLocationByCoordinate(new double[]{-6.1753924, 106.8249641}, true, true, IConfig.ICON_GPS_RADIUS);
 
         googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
             @Override
@@ -101,11 +101,11 @@ public class DemoMapActivity extends BaseActivity implements OnMapReadyCallback,
                         List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
                         if (addresses.size() == 0) return;
 
-                        String address = addresses.get(0).getAddressLine(0);
-                        String region = addresses.get(0).getAdminArea();
-                        String city = addresses.get(0).getLocality();
-                        String state = addresses.get(0).getAdminArea();
-                        String fullAddress = address + ", " + city + " " + state;
+//                        String address = addresses.get(0).getAddressLine(0);
+//                        String region = addresses.get(0).getAdminArea();
+//                        String city = addresses.get(0).getLocality();
+//                        String state = addresses.get(0).getAdminArea();
+//                        String fullAddress = address + ", " + city + " " + state;
 
 
                     } catch (IOException e) {
@@ -136,8 +136,13 @@ public class DemoMapActivity extends BaseActivity implements OnMapReadyCallback,
                 LocationServices.FusedLocationApi.requestLocationUpdates(baseMap.getGoogleApiClient(), mLocationRequest, this);
 
             } else {
+                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+                baseMap.createMarker(baseMap.getGoogleMap(), latLng, true, IConfig.ICON_GPS_RADIUS);
+                baseMap.getGoogleMap()
+                        .addCircle(new CircleOptions()
+                                .center(latLng).radius(500).strokeColor(getResources().getColor(R.color.color_black_transparent20))
+                                .fillColor(getResources().getColor(R.color.color_black_transparent20)));
 
-                baseMap.createMarker(baseMap.getGoogleMap(), new LatLng(location.getLatitude(), location.getLongitude()), true, R.drawable.marker);
             }
         } catch (Exception e) {
             Log.e("MapKokuoFragment:", e.getMessage());

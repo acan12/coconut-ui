@@ -8,4 +8,5 @@ public interface IConfig {
 
     // request code
     int REQUEST_CODE_MAP_PERMISSION = 100;
+    int ICON_GPS_RADIUS = R.drawable.smile;
 }
