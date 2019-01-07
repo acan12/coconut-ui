@@ -23,7 +23,7 @@ import java.io.File;
 import app.beelabs.com.codebase.base.BaseActivity;
 import app.coconut.ui.com.beelabs.ui.camera.CocoCameraPersona;
 import app.coconut.ui.com.beelabs.ui.camera.CocoPhotoHandler;
-import app.coconut.ui.com.beelabs.ui.camera.ViewPersonaCoco;
+import app.coconut.ui.com.beelabs.ui.camera.view.ViewPersonaCoco;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

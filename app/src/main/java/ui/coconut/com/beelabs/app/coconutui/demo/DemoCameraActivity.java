@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import app.beelabs.com.codebase.base.BaseActivity;
-import app.coconut.ui.com.beelabs.ui.camera.CameraUtil;
+import app.coconut.ui.com.beelabs.ui.util.CameraUtil;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

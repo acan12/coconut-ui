@@ -48,11 +48,11 @@ public class CocoPhotoHandler implements Camera.PictureCallback {
 
         Bitmap bitmap = null;
         if (cameraType == IConfig.CAMERA_PERSONA_TYPE) {
-            PhotoResolution photo = calculateResolutionPhotoCrop(bmp);
+            PhotoResolution photo = calculateResolutionPhotoFull(bmp, cameraFacing);
             bitmap = Bitmap.createBitmap(photo.getBmp(), photo.getLeft(), photo.getTop(), photo.getWidth(), photo.getHeight(), photo.getMtx(), true);
 
         } else if (cameraType == IConfig.CAMERA_IDCARD_TYPE) {
-            PhotoResolution photo = calculateResolutionPhotoFull(bmp, cameraFacing);
+            PhotoResolution photo = calculateResolutionPhotoCrop(bmp);
             bitmap = Bitmap.createBitmap(photo.getBmp(), 0, 0, photo.getWidth(), photo.getHeight(), photo.getMtx(), true);
         }
 
@@ -121,7 +121,7 @@ public class CocoPhotoHandler implements Camera.PictureCallback {
 
 
         Matrix mtx = new Matrix();
-        mtx.postRotate(90);
+        mtx.postRotate(-90);
         int left = x / 4;//(w - 320)>0? 320:50;
         int top = 0;//(h - 320)>0? 320:50 ;
 

@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.ui.camera;
+package app.coconut.ui.com.beelabs.ui.util;
 
 import android.content.Context;
 import android.content.Intent;
