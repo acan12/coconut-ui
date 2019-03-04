@@ -5,10 +5,15 @@ android {
     defaultConfig {
         applicationId "ui.coconut.com.beelabs.app.coconutui"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
         release {
@@ -29,6 +34,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:11.4.2'
     implementation 'com.google.android.gms:play-services-places:11.4.2'
     implementation 'com.github.tajchert:nammu:1.2.0'
+    implementation 'com.android.support:multidex:1.0.1'
 
     // basic
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
