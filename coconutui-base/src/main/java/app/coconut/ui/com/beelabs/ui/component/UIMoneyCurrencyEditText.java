@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.ui;
+package app.coconut.ui.com.beelabs.ui.component;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -12,20 +12,20 @@ import android.widget.EditText;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class MoneyCurrencyEditText extends android.support.v7.widget.AppCompatEditText {
+public class UIMoneyCurrencyEditText extends android.support.v7.widget.AppCompatEditText {
     private static final int MAX_LENGTH = 15;
     private CurrencyTextWatcher currencyTextWatcher = new CurrencyTextWatcher(this);
 
 
-    public MoneyCurrencyEditText(Context context) {
+    public UIMoneyCurrencyEditText(Context context) {
         this(context, null);
     }
 
-    public MoneyCurrencyEditText(Context context, AttributeSet attrs) {
+    public UIMoneyCurrencyEditText(Context context, AttributeSet attrs) {
         this(context, attrs, android.support.v7.appcompat.R.attr.editTextStyle);
     }
 
-    public MoneyCurrencyEditText(Context context, AttributeSet attrs, int defStyleAttr) {
+    public UIMoneyCurrencyEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         this.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MAX_LENGTH)});

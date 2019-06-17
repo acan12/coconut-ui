@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="11dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot1_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri1_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_ciri_ciri_interpersonal1"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot2_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri2_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_ciri_ciri_interpersonal2"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot3_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri3_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_ciri_ciri_interpersonal3"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot4_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri4_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_ciri_ciri_interpersonal4"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot5_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri5_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_ciri_ciri_interpersonal5"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dot6_text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="	• 	"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/kecerdasan_ciri_ciri6_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kecerdasan_dan_lain_lain"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+
+</LinearLayout>

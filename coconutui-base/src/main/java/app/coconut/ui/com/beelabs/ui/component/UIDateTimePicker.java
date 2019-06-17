@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.ui;
+package app.coconut.ui.com.beelabs.ui.component;
 
 import android.app.DatePickerDialog;
 import android.content.Context;

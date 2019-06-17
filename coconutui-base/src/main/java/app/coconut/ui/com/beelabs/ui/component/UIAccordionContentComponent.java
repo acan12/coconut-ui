@@ -1,11 +1,11 @@
-package app.coconut.ui.com.beelabs.ui;
+package app.coconut.ui.com.beelabs.ui.component;
 
 import android.animation.ValueAnimator;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
-public class AccordionContentComponent {
+public class UIAccordionContentComponent {
 
     public static class AccordionCallback {
         public void onExpandListener() {

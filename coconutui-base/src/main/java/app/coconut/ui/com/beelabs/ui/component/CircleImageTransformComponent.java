@@ -1,4 +1,4 @@
-package app.coconut.ui.com.beelabs.ui;
+package app.coconut.ui.com.beelabs.ui.component;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

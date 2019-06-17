@@ -2,4 +2,14 @@
     <string name="app_name">CoconutUI</string>
 
     <string name="map_google_credential">AIzaSyA6AMCoHo4f5Yp0vCEB8VpPNzQdbkyQmU8</string>
+
+    <string name="identification_text1">Berikut ini Bunda akan mengisi beberapa pertanyaan untuk mengenali Kecerdasan Si Kecil. Caranya sangat mudah, cobalah bayangkan perilaku Si Kecil lalu pilih kebiasaan Si Kecil yang sesuai dengan pilihan yang telah di sediakan.</string>
+    <string name="identification_text2">Perlu diingat, bahwa hasil dari Alat Identifikasi MI Morinaga (Morinaga MI Identification Tool) ini tidaklah MUTLAK karena pernyataan dalam alat ini hanyalah sebagian contoh-contoh perilaku yang bisa diamati. Masih banyak perilaku lain yang bisa mengindikasikan kecerdasan majemuk Si Kecil.</string>
+    <string name="kecerdasan_dan_lain_lain">dan lain-lain.</string>
+
+    <string name="kecerdasan_ciri_ciri_interpersonal1">Memiliki banyak teman, supel dalam bergaul.</string>
+    <string name="kecerdasan_ciri_ciri_interpersonal2">Dapat mengerti perasaan orang lain dan sering menawarkan bantuan apabila melihat orang lain dalam kesulitan.</string>
+    <string name="kecerdasan_ciri_ciri_interpersonal3">Mampu menarik perhatian dan menikmati keberadaan orang lain disekelilingnya.</string>
+    <string name="kecerdasan_ciri_ciri_interpersonal4">Senang bermain berkelompok.</string>
+    <string name="kecerdasan_ciri_ciri_interpersonal5">Bisa membuat orang lain percaya pada kata-kata dan pemikirannya.</string>
 </resources>

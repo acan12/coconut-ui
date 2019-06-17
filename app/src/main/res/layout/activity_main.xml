@@ -27,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimaryDark"
                 android:padding="10dp"
-                android:text="Hello World!"
+                android:layout_gravity="center"
+                android:text="Pick Date"
                 android:textColor="@color/color_white" />
 
 
@@ -39,6 +40,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/colorAccent"
                 android:text="Show Bottom"
+                android:padding="10dp"
                 android:textColor="@color/color_white" />
 
             <Button
@@ -49,6 +51,17 @@
                 android:layout_marginTop="20dp"
                 android:background="@android:color/holo_green_dark"
                 android:text="Slide UP"
+                android:textColor="@color/color_white" />
+
+            <Button
+                android:id="@+id/demoAccordion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@android:color/holo_green_dark"
+                android:text="Accordion"
                 android:textColor="@color/color_white" />
         </LinearLayout>
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <!-- ciri ciri -->
+        <FrameLayout
+            android:id="@+id/accordion_ciriciri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ciri_ciri_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Ciri-ciri"
+                android:textColor="@color/color_red"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow_indicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:src="@drawable/arrow_down" />
+
+        </FrameLayout>
+
+        <include
+            android:id="@+id/ciri_ciri_layout"
+            layout="@layout/partial_ciri_ciri_interpersonal" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

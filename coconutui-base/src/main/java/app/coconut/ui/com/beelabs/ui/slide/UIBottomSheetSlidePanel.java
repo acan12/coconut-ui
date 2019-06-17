@@ -9,7 +9,7 @@ import app.coconut.ui.com.beelabs.R;
 
 public class UIBottomSheetSlidePanel {
 
-    public static void showSlidePanel(int layoutSlideID, Context context, SlideCallbackListener callback){
+    public static void showSlidePanel(int layoutSlideID, Context context, SlideCallbackListener callback) {
         View view = LayoutInflater.from(context).inflate(layoutSlideID, null);
         BottomSheetDialog dialog = new BottomSheetDialog(context, R.style.SheetDialog);
         dialog.setContentView(view);

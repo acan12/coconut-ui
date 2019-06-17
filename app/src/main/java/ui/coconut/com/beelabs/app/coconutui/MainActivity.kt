@@ -1,17 +1,18 @@
 package ui.coconut.com.beelabs.app.coconutui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomSheetBehavior
 import android.support.design.widget.BottomSheetDialog
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import app.beelabs.com.codebase.base.BaseActivity
-import app.coconut.ui.com.beelabs.ui.UIDateTimePicker
+import app.coconut.ui.com.beelabs.ui.component.UIDateTimePicker
 import app.coconut.ui.com.beelabs.ui.slide.UIBottomSheetSlidePanel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_slide.*
 import kotlinx.android.synthetic.main.content_slide.view.*
+import ui.coconut.com.beelabs.app.coconutui.demo.DemoAccordionActivity
 
 class MainActivity : BaseActivity() {
 
@@ -29,7 +30,13 @@ class MainActivity : BaseActivity() {
         demoDialogBottomSheet.setOnClickListener {
             showSlideDialogPanel()
         }
+
+        demoAccordion.setOnClickListener {
+            intent = Intent(this@MainActivity, DemoAccordionActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 
     private fun showSlideDialogPanel() {
 
