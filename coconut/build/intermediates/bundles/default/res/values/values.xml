@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_black_transparent80">#CC000000</color>
+    <color name="color_white">#fff</color>
+    <string name="app_name">Coconut</string>
+    <string name="coconut_internet_fail_message">Internet fail</string>
+    <string name="coconut_reply_action_label">Reply</string>
+    <string name="database_package_name">coconut.db</string>
+    <style name="CoconutDialogFullScreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+</resources>
