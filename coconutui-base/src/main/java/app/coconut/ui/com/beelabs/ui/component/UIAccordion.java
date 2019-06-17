@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
-public class UIAccordionContentComponent {
+public class UIAccordion {
 
     public static class AccordionCallback {
         public void onExpandListener() {
