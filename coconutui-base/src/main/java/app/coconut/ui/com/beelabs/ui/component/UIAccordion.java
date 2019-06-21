@@ -18,9 +18,9 @@ public class UIAccordion {
     }
 
 
-    public static void accordionView(View viewButton, final View viewContent, boolean defaultExpand, final AccordionCallback callback) {
+    public static void accordionView(View viewButton, final View viewContent, boolean defaultExpand, final AccordionCallback accordionCallback) {
         int contentHeight = ((LinearLayout.LayoutParams) viewContent.getLayoutParams()).height;
-        accordionView(viewButton, viewContent, contentHeight, defaultExpand, callback);
+        accordionView(viewButton, viewContent, contentHeight, defaultExpand, accordionCallback);
     }
 
     public static void accordionView(View viewButton, final View viewContent, final int contentHeight, boolean defaultExpand, final AccordionCallback callback) {
