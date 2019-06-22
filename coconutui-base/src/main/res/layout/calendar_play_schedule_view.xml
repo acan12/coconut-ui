@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/calendarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor">
+
+        <LinearLayout
+            android:id="@+id/container_previous"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="10dp"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageButton
+                android:id="@+id/previousButton"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/forwardButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/container_previous"
+            app:layout_constraintRight_toLeftOf="@id/forwardButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!-- eventDays header -->
+    <LinearLayout
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/filter_kidname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/arrow_down"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="onFilterKidname"
+            android:paddingBottom="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp"
+            android:paddingTop="13dp"
+            android:text="Pilih Anak"
+            android:textColor="@color/color_black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/bottom_border_grey_line" />
+
+        <LinearLayout
+            android:id="@+id/abbreviationsBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mondayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_monday"
+                android:textColor="@color/color_calendar_dayname" />
+
+            <TextView
+                android:id="@+id/tuesdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_tuesday"
+                android:textColor="@color/color_calendar_dayname" />
+
+            <TextView
+                android:id="@+id/wednesdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_wednesday"
+                android:textColor="@color/color_calendar_dayname" />
+
+            <TextView
+                android:id="@+id/thursdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_thursday"
+                android:textColor="@color/color_calendar_dayname" />
+
+            <TextView
+                android:id="@+id/fridayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_friday"
+                android:textColor="@color/color_calendar_dayname" />
+
+            <TextView
+                android:id="@+id/saturdayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_saturday"
+                android:textColor="@color/color_red" />
+
+            <TextView
+                android:id="@+id/sundayLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/material_calendar_sunday"
+                android:textColor="@color/color_red" />
+        </LinearLayout>
+
+        <app.coconut.ui.com.beelabs.ui.component.calendar.view.CalendarScheduleViewPager
+            android:id="@+id/calendarViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abbreviationsBar"
+            android:background="@color/color_grey3" />
+
+
+        <!-- detail event -->
+        <LinearLayout
+            android:id="@+id/calendar_detail_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/calendarViewPager"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/full_date_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:text="Senin, 21 Desember 2017"
+                android:textColor="@color/color_black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bottom_border_white_fill" />
+            <LinearLayout
+                android:id="@+id/list_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <!-- dropdown bottom -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/panel_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

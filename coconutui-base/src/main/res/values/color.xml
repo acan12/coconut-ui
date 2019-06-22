@@ -3,4 +3,11 @@
     <color name="color_white_transparent">#CCFFFFFF</color>
     <color name="color_red">#eb212f</color>
     <color name="color_black">#000000</color>
+
+
+    <color name="color_calendar_dayname">#4a4a4a</color>
+    <color name="color_calendar_border">#fccb05</color>
+    <color name="color_grey">#9b9b9b</color>
+    <color name="color_grey2">#f3f3f3</color>
+    <color name="color_grey3">#d8d8d8</color>
 </resources>

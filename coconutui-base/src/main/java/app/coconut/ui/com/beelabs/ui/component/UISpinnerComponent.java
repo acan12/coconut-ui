@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class SpinnerComponent {
+public class UISpinnerComponent {
 
     public static void show(int rowSpinnerLayoutId, final int rowSpinnerId, List<String> dataLabel, final Spinner spinner, final TextView target, Context context) {
         show(rowSpinnerLayoutId, rowSpinnerId, dataLabel, spinner, target, context, null);
