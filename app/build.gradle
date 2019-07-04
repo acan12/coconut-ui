@@ -40,7 +40,7 @@ dependencies {
 
     // basic
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
-    implementation 'com.github.acan12:coconut:2.0.4'
+    implementation 'com.github.acan12:coconut:2.0.13'
     implementation 'com.jakewharton:butterknife:8.8.1'  // ButterKnife
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1' // ButterKnife
     implementation 'com.applandeo:material-calendar-view:1.4.0'
@@ -48,6 +48,11 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:2.4"
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.x.x'
+
+    // demo sample library implementation
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 
     // test library
