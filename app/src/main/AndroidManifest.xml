@@ -19,8 +19,8 @@
         </activity>
 
         <activity android:name=".demo.DemoAccordionActivity" android:screenOrientation="portrait" />
-        <activity android:name=".demo.DemoCalendarActivity" android:screenOrientation="portrait" >
-        </activity>
+        <activity android:name=".demo.DemoCalendarActivity" android:screenOrientation="portrait" />
+        <activity android:name=".demo.DemoDropDownActivity" android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

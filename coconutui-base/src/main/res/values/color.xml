@@ -3,6 +3,7 @@
     <color name="color_white_transparent">#CCFFFFFF</color>
     <color name="color_red">#eb212f</color>
     <color name="color_black">#000000</color>
+    <color name="color_black_transparent">#CC000000</color>
 
 
     <color name="color_calendar_dayname">#4a4a4a</color>

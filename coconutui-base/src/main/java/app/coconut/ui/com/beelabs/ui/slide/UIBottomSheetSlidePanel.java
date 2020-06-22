@@ -1,9 +1,10 @@
 package app.coconut.ui.com.beelabs.ui.slide;
 
 import android.content.Context;
-import android.support.design.widget.BottomSheetDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import app.coconut.ui.com.beelabs.R;
 

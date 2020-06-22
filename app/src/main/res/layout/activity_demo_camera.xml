@@ -20,4 +20,5 @@
         android:layout_height="50dp"
         android:text="take your photo" />
 
+
 </LinearLayout>

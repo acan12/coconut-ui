@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFCC00">
 
-    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -63,11 +63,22 @@
                 android:background="@android:color/holo_green_dark"
                 android:text="Accordion"
                 android:textColor="@color/color_white" />
+
+            <Button
+                android:id="@+id/demoDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/color_grey"
+                android:text="DropDown"
+                android:padding="10dp"
+                android:textColor="@color/color_white" />
         </LinearLayout>
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Adding bottom sheet after main content -->
-    <include layout="@layout/content_slide" />
-</android.support.design.widget.CoordinatorLayout>
+<!--    <include layout="@layout/content_slide" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

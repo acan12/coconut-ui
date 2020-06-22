@@ -9,10 +9,14 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class UIMoneyCurrencyEditText extends android.support.v7.widget.AppCompatEditText {
+import app.coconut.ui.com.beelabs.R;
+
+public class UIMoneyCurrencyEditText extends AppCompatEditText {
     private static final int MAX_LENGTH = 15;
     private CurrencyTextWatcher currencyTextWatcher = new CurrencyTextWatcher(this);
 
@@ -22,7 +26,7 @@ public class UIMoneyCurrencyEditText extends android.support.v7.widget.AppCompat
     }
 
     public UIMoneyCurrencyEditText(Context context, AttributeSet attrs) {
-        this(context, attrs, android.support.v7.appcompat.R.attr.editTextStyle);
+        this(context, attrs, R.attr.editTextStyle);
     }
 
     public UIMoneyCurrencyEditText(Context context, AttributeSet attrs, int defStyleAttr) {
