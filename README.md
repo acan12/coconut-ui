@@ -1,7 +1,8 @@
 # coconut-ui
-**version 1.1.1:**
+**version 1.1.2:**
 
- - integrate wrapper method for bottomSheetDialog 
+ - support wrapper method for bottomSheetDialog
+ - support dropdown bottom slide panel
 
 **Usage:**
 
@@ -22,7 +23,7 @@ dependencies {
 </pre>
 
 Available Fitur:
-##1.Show Slide Panel from bottom##
+**1.Show Slide Panel from bottom**
 <pre>
 // custom layout for content slide panel -> R.layout.content_slide
 UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : UIBottomSheetSlidePanel.SlideCallbackListener() {  
@@ -34,7 +35,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
  })
 </pre>
 
-##2.Show custom dropdown from bottom##
+**2.Show custom dropdown from bottom**
 ```kotlin
     // build and show dropdown slide up
      var dropDown = UiDropdownOnBottom.newInstance().build(
@@ -70,7 +71,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
     }
 ```
 
-##3.Custom layout and change color of coconut dropdown## 
+**3.Custom layout and change color of coconut dropdown** 
 
 [`coconut_slide_panel.xml`]  use for background layout
 ```xml
@@ -100,7 +101,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
                 android:background="@color/color_white"
                 android:orientation="vertical" />
         </ScrollView>
-    </RelativeLayout>
+    </RelativeLayout>   
 ```
 *must have element ID `slideBackgroundCoconut`, and `slideContentCoconut`*
 
