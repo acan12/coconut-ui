@@ -2,11 +2,13 @@ package ui.coconut.com.beelabs.app.coconutui.demo
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import app.beelabs.com.codebase.base.BaseActivity
 import app.coconut.ui.com.beelabs.ui.slide.DropDownItemModel
 import app.coconut.ui.com.beelabs.ui.slide.UiDropdownOnBottom
 import kotlinx.android.synthetic.main.activity_demo_drop_down.*
+import kotlinx.android.synthetic.main.activity_demo_drop_down.view.*
 import ui.coconut.com.beelabs.app.coconutui.R
 
 
@@ -22,31 +24,29 @@ class DemoDropDownActivity : BaseActivity() {
         // Custom Spinner Drop down elements
         dd_layout.setOnClickListener {
             if (panelSlide == null) {
-                dropDown = UiDropdownOnBottom.newInstance()
-                dropDown!!.build(
+                dropDown = UiDropdownOnBottom.newInstance().build(
                     listOf<DropDownItemModel>(
                         DropDownItemModel("first"),
                         DropDownItemModel("second")
                     ),
                     parentLayout,
-                    R.layout.slide_panel,
-                    R.id.slideContent,
                     this,
                     object : UiDropdownOnBottom.OnItemListener() {
                         override fun onClick(view: View, pos: Int) {
                             Toast.makeText(
                                 this@DemoDropDownActivity,
-                                "Pos: ${pos}",
+                                "name: ${(view as TextView).text}",
                                 Toast.LENGTH_SHORT
                             ).show()
+                            onBackPressed()
                         }
 
-                        override fun outItemClick() {
+                        override fun outsideItemClick() {
                             onBackPressed()
                         }
 
                     }
-                )
+                )?.show()
             }
         }
     }

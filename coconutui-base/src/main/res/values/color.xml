@@ -11,4 +11,9 @@
     <color name="color_grey">#9b9b9b</color>
     <color name="color_grey2">#f3f3f3</color>
     <color name="color_grey3">#d8d8d8</color>
+
+    <!-- Dropdown Component  -->
+    <color name="coconut_color_item_selected">#f3f3f3</color>
+    <color name="coconut_text_color">#000000</color>
+    <color name="coconut_color_background_transparent">#CC000000</color>
 </resources>

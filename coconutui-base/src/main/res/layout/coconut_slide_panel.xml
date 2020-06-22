@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_black_transparent"
+    android:background="@color/coconut_color_background_transparent"
     android:orientation="vertical">
 
     <View
-        android:id="@+id/slideBackground"
+        android:id="@+id/slideBackgroundCoconut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/slideContent" />
+        android:layout_above="@+id/slideContentCoconut" />
 
     <LinearLayout
-        android:id="@+id/slideContent"
+        android:id="@+id/slideContentCoconut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

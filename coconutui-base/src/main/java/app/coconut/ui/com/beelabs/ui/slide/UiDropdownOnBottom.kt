@@ -10,8 +10,10 @@ import app.coconut.ui.com.beelabs.R
 
 
 class UiDropdownOnBottom {
-    var panelSlide: View? = null
-    var parent: ViewGroup? = null
+    private var panelContent: ViewGroup? = null
+    private var panelSlide: View? = null
+    private var parent: ViewGroup? = null
+    private var context: Context? = null
 
     companion object {
         fun newInstance(): UiDropdownOnBottom {
@@ -22,41 +24,44 @@ class UiDropdownOnBottom {
     fun build(
         data: List<DropDownItemModel>,
         parentLayout: ViewGroup,
-        slideLayoutResource: Int,
-        slideContentID: Int,
         context: Context,
         itemListener: OnItemListener
-    ): View? {
+    ): UiDropdownOnBottom? {
 
         val inflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var panelSlide = inflater.inflate(
-            slideLayoutResource,
+            R.layout.coconut_slide_panel,
             parentLayout,
             false
         ) as View
         this.panelSlide = panelSlide
         this.parent = parentLayout
+        this.context = context
 
         parentLayout.addView(panelSlide)
-        val panelBg = panelSlide!!.findViewById<View>(R.id.slideBackground)
-        val panelContent = panelSlide!!.findViewById<ViewGroup>(slideContentID)
+        val panelBg = panelSlide!!.findViewById<View>(R.id.slideBackgroundCoconut)
+        panelContent = panelSlide!!.findViewById(R.id.slideContentCoconut)
 
         for ((i, item) in data.withIndex()) {
             var itemView =
                 LayoutInflater.from(context).inflate(R.layout.item_dropdown, panelContent, false)
-            itemView.findViewById<TextView>(R.id.tv_item).text = item.name
-            itemView.findViewById<TextView>(R.id.tv_item)
+            itemView.findViewById<TextView>(R.id.tv_item_name).text = item.name
+            itemView.findViewById<TextView>(R.id.tv_item_name)
                 .setOnClickListener { itemListener.onClick(itemView, i) }
-            panelContent.addView(itemView)
+            panelContent!!.addView(itemView)
         }
-        panelBg.setOnClickListener { itemListener.outItemClick() }
+        panelBg.setOnClickListener { itemListener.outsideItemClick() }
+        return this
+    }
+
+    fun show(): UiDropdownOnBottom {
         // buttons panel
         val bottomUp = AnimationUtils.loadAnimation(context, R.anim.slide_up)
-        panelContent.startAnimation(bottomUp)
-        panelContent.visibility = View.VISIBLE
+        panelContent!!.startAnimation(bottomUp)
+        panelContent!!.visibility = View.VISIBLE
 
-        return panelSlide
+        return this
     }
 
     fun dismiss(): Boolean {
@@ -77,7 +82,7 @@ class UiDropdownOnBottom {
 
         }
 
-        open fun outItemClick(){}
+        open fun outsideItemClick(){}
     }
 }
 
