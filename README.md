@@ -22,7 +22,7 @@ dependencies {
 	}
 </pre>
 
-Available Fitur:
+#Available Features:
 **1.Show Slide Panel from bottom**
 <pre>
 // custom layout for content slide panel -> R.layout.content_slide
