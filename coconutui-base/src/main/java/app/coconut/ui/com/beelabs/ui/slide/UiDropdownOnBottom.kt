@@ -15,10 +15,12 @@ class UiDropdownOnBottom {
     private var parent: ViewGroup? = null
     private var context: Context? = null
 
+    private object HOLDER {
+        val INSTANCE = UiDropdownOnBottom()
+    }
+
     companion object {
-        fun newInstance(): UiDropdownOnBottom {
-            return UiDropdownOnBottom()
-        }
+        val instance: UiDropdownOnBottom by lazy { HOLDER.INSTANCE }
     }
 
     fun build(
@@ -46,9 +48,9 @@ class UiDropdownOnBottom {
         for ((i, item) in data.withIndex()) {
             var itemView =
                 LayoutInflater.from(context).inflate(R.layout.item_dropdown, panelContent, false)
-            itemView.findViewById<TextView>(R.id.tv_item_name).text = item.name
-            itemView.findViewById<TextView>(R.id.tv_item_name)
-                .setOnClickListener { itemListener.onClick(itemView, i) }
+            var tvItem = itemView.findViewById<TextView>(R.id.tv_item_name)
+            tvItem.text = item.name
+            tvItem.setOnClickListener { itemListener.onClick(itemView, i) }
             panelContent!!.addView(itemView)
         }
         panelBg.setOnClickListener { itemListener.outsideItemClick() }
@@ -82,7 +84,7 @@ class UiDropdownOnBottom {
 
         }
 
-        open fun outsideItemClick(){}
+        open fun outsideItemClick() {}
     }
 }
 

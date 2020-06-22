@@ -3,7 +3,6 @@ package ui.coconut.com.beelabs.app.coconutui
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import app.beelabs.com.codebase.base.BaseActivity
 import app.coconut.ui.com.beelabs.ui.component.UIDateTimePicker
 import app.coconut.ui.com.beelabs.ui.slide.UIBottomSheetSlidePanel
@@ -12,7 +11,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_slide.*
 import kotlinx.android.synthetic.main.content_slide.view.*
-import ui.coconut.com.beelabs.app.coconutui.demo.DemoAccordionActivity
 import ui.coconut.com.beelabs.app.coconutui.demo.DemoDropDownActivity
 
 class MainActivity : BaseActivity() {
@@ -21,20 +19,10 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        demoButton.setOnClickListener { UIDateTimePicker.onPicker(demoButton, this@MainActivity) }
-
-        demoBottomSheet.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Test Slide button", Toast.LENGTH_SHORT).show()
-            showExtraInfo();
-        }
+        demoDatePicker.setOnClickListener { UIDateTimePicker.onPicker(demoDatePicker, this@MainActivity) }
 
         demoDialogBottomSheet.setOnClickListener {
             showSlideDialogPanel()
-        }
-
-        demoAccordion.setOnClickListener {
-            intent = Intent(this@MainActivity, DemoAccordionActivity::class.java)
-            startActivity(intent)
         }
 
         demoDropDown.setOnClickListener {

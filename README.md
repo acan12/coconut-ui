@@ -84,16 +84,22 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
             android:id="@+id/slideBackgroundCoconut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/slideContentCoconut" />
+            android:layout_above="@+id/scrollbar" />
     
-        <LinearLayout
-            android:id="@+id/slideContentCoconut"
+        <ScrollView
+            android:id="@+id/scrollbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/color_white"
-            android:orientation="vertical" />
+            android:fillViewport="true">
     
+            <LinearLayout
+                android:id="@+id/slideContentCoconut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical" />
+        </ScrollView>
     </RelativeLayout>
 ```
 *must have element ID `slideBackgroundCoconut`, and `slideContentCoconut`*
