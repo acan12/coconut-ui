@@ -38,6 +38,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
 **2.Show custom dropdown from bottom**
 ```kotlin
     // build and show dropdown slide up
+    // parentLayout -> Layout Activity or Fragment on Element Root ID
      var dropDown = UiDropdownOnBottom.newInstance().build(
                 listOf<DropDownItemModel>(
                     DropDownItemModel("first"),
