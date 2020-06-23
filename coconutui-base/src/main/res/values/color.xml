@@ -8,6 +8,7 @@
 
     <color name="color_calendar_dayname">#4a4a4a</color>
     <color name="color_calendar_border">#fccb05</color>
+    <color name="color_calendar_header">#2962FF</color>
     <color name="color_grey">#9b9b9b</color>
     <color name="color_grey2">#f3f3f3</color>
     <color name="color_grey3">#d8d8d8</color>

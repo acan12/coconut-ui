@@ -10,7 +10,7 @@
         android:id="@+id/calendarHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/defaultColor">
+        android:background="@color/color_calendar_header">
 
         <LinearLayout
             android:id="@+id/container_previous"
