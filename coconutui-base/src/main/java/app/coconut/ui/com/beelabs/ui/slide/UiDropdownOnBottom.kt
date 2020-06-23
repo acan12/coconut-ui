@@ -42,8 +42,8 @@ class UiDropdownOnBottom {
         this.context = context
 
         parentLayout.addView(panelSlide)
-        val panelBg = panelSlide!!.findViewById<View>(R.id.slideBackgroundCoconut)
-        panelContent = panelSlide!!.findViewById(R.id.slideContentCoconut)
+        val panelBg = panelSlide.findViewById<View>(R.id.slideBackgroundCoconut)
+        panelContent = panelSlide.findViewById(R.id.slideContentCoconut)
 
         for ((i, item) in data.withIndex()) {
             var itemView =

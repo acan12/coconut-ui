@@ -4,18 +4,18 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <app.coconut.ui.com.beelabs.ui.component.calendar.view.CalendarPlayScheduleView
-        android:id="@+id/calendarView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:forwardButtonSrc="@drawable/yellow_arrow_right"
-        app:headerColor="@color/colorPrimaryDark"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:previousButtonSrc="@drawable/yellow_arrow_left"
-        app:todayLabelColor="@color/colorPrimaryDark"
-        app:type="classic" />
+<!--    <app.coconut.ui.com.beelabs.ui.component.calendar.view.CalendarPlayScheduleView-->
+<!--        android:id="@+id/calendarView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:forwardButtonSrc="@drawable/yellow_arrow_right"-->
+<!--        app:headerColor="@color/colorPrimaryDark"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:previousButtonSrc="@drawable/yellow_arrow_left"-->
+<!--        app:todayLabelColor="@color/colorPrimaryDark"-->
+<!--        app:type="classic" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
