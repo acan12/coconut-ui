@@ -18,7 +18,7 @@ allprojects {
 
 <pre>
 dependencies {
-	        implementation 'com.github.acan12:coconut-ui:1.1.2-alpha'
+	        implementation 'com.github.acan12:coconut-ui:1.1.2-alpha-v2'
 	}
 </pre>
 
