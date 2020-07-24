@@ -50,7 +50,7 @@ class UiDropdownOnBottom {
                 LayoutInflater.from(context).inflate(R.layout.item_dropdown, panelContent, false)
             var tvItem = itemView.findViewById<TextView>(R.id.tv_item_name)
             tvItem.text = item.name
-            tvItem.setOnClickListener { itemListener.onClick(itemView, i) }
+            tvItem.setOnClickListener { itemListener.onClick(itemView, i, data[i]) }
             panelContent!!.addView(itemView)
         }
         panelBg.setOnClickListener { itemListener.outsideItemClick() }
@@ -80,7 +80,7 @@ class UiDropdownOnBottom {
     }
 
     open class OnItemListener {
-        open fun onClick(view: View, pos: Int) {
+        open fun onClick(view: View, pos: Int, item: DropDownItemModel) {
 
         }
 
@@ -92,6 +92,11 @@ class DropDownItemModel {
     var name: String? = null
     var value: Any? = null
 
-    constructor(name: String)
-    constructor(name: String, value: Any)
+    constructor(name: String){
+        this.name = name
+    }
+    constructor(name: String, value: Any){
+        this.name = name
+        this.value = value
+    }
 }

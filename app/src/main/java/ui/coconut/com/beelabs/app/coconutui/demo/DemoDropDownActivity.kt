@@ -26,7 +26,7 @@ class DemoDropDownActivity : BaseActivity() {
 
                 dropDown = UiDropdownOnBottom.instance.build(
                     listOf(
-                        DropDownItemModel("1"),
+                        DropDownItemModel("1", "satu"),
                         DropDownItemModel("2"),
                         DropDownItemModel("3"),
                         DropDownItemModel("4"),
@@ -50,10 +50,10 @@ class DemoDropDownActivity : BaseActivity() {
                     parentLayout,
                     this,
                     object : UiDropdownOnBottom.OnItemListener() {
-                        override fun onClick(view: View, pos: Int) {
+                        override fun onClick(view: View, pos: Int, item: DropDownItemModel) {
                             Toast.makeText(
                                 this@DemoDropDownActivity,
-                                "name: ${(view as TextView).text}",
+                                "name: ${(view as TextView).text}|| ${item.value}",
                                 Toast.LENGTH_SHORT
                             ).show()
                             onBackPressed()

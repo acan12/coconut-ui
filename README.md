@@ -47,10 +47,10 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
                 parentLayout,
                 this,
                 object : UiDropdownOnBottom.OnItemListener() {
-                    override fun onClick(view: View, pos: Int) {
+                    override fun onClick(view: View, pos: Int, item: DropDownItemModel) {
                         Toast.makeText(
                             this@DemoDropDownActivity,
-                            "name: ${(view as TextView).text}",
+                            "name: ${(view as TextView).text} | ${item.value}",
                             Toast.LENGTH_SHORT
                         ).show()
                         onBackPressed()
