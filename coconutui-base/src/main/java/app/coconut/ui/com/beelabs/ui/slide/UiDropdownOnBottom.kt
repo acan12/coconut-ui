@@ -44,7 +44,7 @@ class UiDropdownOnBottom {
         parentLayout.addView(panelSlide)
         val panelBg = panelSlide.findViewById<View>(R.id.slideBackgroundCoconut)
         panelContent = panelSlide.findViewById(R.id.slideContentCoconut)
-
+        panelContent!!.removeAllViews()
         for ((i, item) in data.withIndex()) {
             var itemView =
                 LayoutInflater.from(context).inflate(R.layout.item_dropdown, panelContent, false)
