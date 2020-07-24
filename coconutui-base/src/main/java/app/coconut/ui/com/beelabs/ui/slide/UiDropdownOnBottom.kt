@@ -88,4 +88,10 @@ class UiDropdownOnBottom {
     }
 }
 
-class DropDownItemModel(var name: String)
+class DropDownItemModel {
+    var name: String? = null
+    var value: Any? = null
+
+    constructor(name: String)
+    constructor(name: String, value: Any)
+}
