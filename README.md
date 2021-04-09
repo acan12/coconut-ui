@@ -1,5 +1,5 @@
 # coconut-ui
-**version 1.1.2-alpha-v7**
+**Version 1.1.2-alpha-v7**
 
  - support wrapper method for bottomSheetDialog
  - support dropdown bottom slide panel
@@ -72,7 +72,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
     }
 ```
 
-**3.Custom layout and change color of coconut dropdown** 
+**3. Custom layout and change color of coconut dropdown** 
 
 [`coconut_slide_panel.xml`]  use for background layout
 ```xml
