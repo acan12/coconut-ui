@@ -11,6 +11,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_slide.*
 import kotlinx.android.synthetic.main.content_slide.view.*
+import ui.coconut.com.beelabs.app.coconutui.demo.DemoCalendarActivity
 import ui.coconut.com.beelabs.app.coconutui.demo.DemoDropDownActivity
 
 class MainActivity : BaseActivity() {
@@ -19,6 +20,10 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        demoCalendar.setOnClickListener {
+            intent = Intent(this@MainActivity, DemoCalendarActivity::class.java)
+            startActivity(intent)
+        }
         demoDatePicker.setOnClickListener { UIDateTimePicker.onPicker(demoDatePicker, this@MainActivity) }
 
         demoDialogBottomSheet.setOnClickListener {

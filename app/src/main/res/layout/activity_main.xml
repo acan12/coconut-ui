@@ -22,6 +22,18 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
+                android:id="@+id/demoCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_black"
+                android:layout_gravity="center"
+                android:text="Calendar View"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                android:textColor="@color/color_white" />
+
+
+            <Button
                 android:id="@+id/demoDatePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
