@@ -1,5 +1,5 @@
 # coconut-ui
-**version 1.1.2:**
+**version 1.1.2-alpha-v7**
 
  - support wrapper method for bottomSheetDialog
  - support dropdown bottom slide panel
@@ -39,7 +39,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
 ```kotlin
     // build and show dropdown slide up
     // parentLayout -> Layout Activity or Fragment on Element Root ID
-     var dropDown = UiDropdownOnBottom.newInstance().build(
+     var dropDown = UiDropdownOnBottom.instance.build(
                 listOf<DropDownItemModel>(
                     DropDownItemModel("first"),
                     DropDownItemModel("second")
