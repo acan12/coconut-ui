@@ -23,7 +23,7 @@ dependencies {
 </pre>
 
 # Available Features:
-**1.Show Slide Panel from bottom**
+**1. Show Slide Panel from bottom**
 <pre>
 // custom layout for content slide panel -> R.layout.content_slide
 UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : UIBottomSheetSlidePanel.SlideCallbackListener() {  
@@ -35,7 +35,7 @@ UIBottomSheetSlidePanel.showSlidePanel(R.layout.content_slide, this,   object : 
  })
 </pre>
 
-**2.Show custom dropdown from bottom**
+**2. Show custom dropdown from bottom**
 ```kotlin
     // build and show dropdown slide up
     // parentLayout -> Layout Activity or Fragment on Element Root ID
